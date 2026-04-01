@@ -1,8 +1,142 @@
 body{
-    display:flex;
-    background: linear-gradient(to right, #ff7350, #feb47b);
+    padding:0%;
+    margin:0%;
+}
+header{
+    display:grid;
+    grid-template-columns: 40% 59%;
+    align-items:center;
+    background-color: white;
 }
 
-#header{
+#lien{
+    
     display:flex;
+    justify-content:space-between;
+}
+#body{
+    background: linear-gradient(to right, #ff7350, #feb47b);
+    height: 82%;
+    border: solid 1px black;
+    display:flex;
+    flex-direction:row;
+}
+aside{
+    margin:5%;
+}
+span{
+    color:white;
+}
+#commence{
+    border-radius:20px;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+#submit{
+    border-radius:20px;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+section{
+    margin-top:5%;
+    color:black;
+}
+#img1{
+    width:75px;
+    height:75px;
+}
+#img2{
+    border:white 1px solid;
+    width:500px;
+    height:500px;
+}
+footer{
+    text-align:center;
+}
+#body2{
+    background: linear-gradient(to right, #ff7350, #feb47b);
+    border-top:1px black solid;
+    display:flex;
+    flex-direction:row;
+    color:white;
+    justify-content: center;
+}
+.section2{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;;
+    align-items:center;
+    background: linear-gradient(to right, #ff7350, #feb47b);
+    border-bottom:1px black solid;
+    color:black;
+    height: 72%;
+}
+form{
+    align-items: center;
+    padding:4%;
+    border:solid white 3px;
+}
+#email{
+    padding-right:6.9%;
+}
+#catalogue{
+    display:flex;
+    flex-direction: row;
+    height: 81.75%;
+    background: linear-gradient(to right, #ff7350, #feb47b);
+    border:black 1px solid;
+    justify-content: center;
+}
+article{
+    border:solid black;
+    color:black;
+    width:70%;
+    background-color: white;
+    border:solid 2px white;
+}
+.img3{
+    height:35%;
+    width: 98%;
+    border:solid 2px white;
+}
+#img4{
+    height:35%;
+    width: 70%;
+    border:solid 2px white;
+}
+#body4{
+    display:flex;
+    flex-direction:column;
+}
+#planete{
+    width: 90%;
+}
+a{
+    color:black;
+    text-decoration: none;
+    border-right:#ff7350 solid 2px;
+    padding-right:1%;
+}
+#a_propos{
+    height: 82%;
+    background: linear-gradient(to right, #ff7350, #feb47b);
+}
+table{
+    display:flex;
+    justify-content: center;
+    margin-top:15%;
+    border-collapse: collapse;
+    text-align:center;
+}
+table tr:first-child {
+    background-color: white;
+  }
+th,td{
+    border:white solid 2px;
+}
+#msErreur{
+    background-color: red;
+    border:black 1px solid;
+    border-radius:20px;
 }

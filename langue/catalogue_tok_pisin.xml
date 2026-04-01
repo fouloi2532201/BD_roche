@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblicatalogue>
+    <catalogue>
+        <lien>img/OIP.webp</lien>
+        <roche>Jioloji</roche>
+        <salaire>85,000/yia</salaire>
+        <note>★★★☆☆</note>
+        <detail>infomesen</detail>
+    </catalogue>
+    <catalogue>
+        <lien>img/surface-eau-bleue-bulles-mot-poisson-dessus_609138-796.avif</lien>
+        <roche>Jioloji solwara</roche>
+        <salaire>100,000/yia</salaire>
+        <note>★★★★☆</note>
+        <detail>infomesen</detail>
+    </catalogue>
+    <catalogue>
+        <lien>img/Géotechnique.jpg</lien>
+        <roche>Jioteknikel</roche>
+        <salaire>120,000/yia</salaire>
+        <note>★★★☆☆</note>
+        <detail>infomesen</detail>
+    </catalogue>
+    <catalogue>
+        <lien>img/Sans-titre.jpg</lien>
+        <roche>Jiokemistri</roche>
+        <salaire>70,000/yia</salaire>
+        <note>★★★☆☆</note>
+        <detail>infomesen</detail>
+    </catalogue>
+    <catalogue>
+        <lien>img/title-1566375832.jpg</lien>
+        <roche>Planetoloji</roche>
+        <salaire>135,000/yia</salaire>
+        <note>★★★★★</note>
+        <detail>infomesen</detail>
+    </catalogue>
+    <catalogue>
+        <lien>img/vue-panoramique-hyperrealiste-du-paysage-helicoptere-eruption-du-volcan-impact-explosion-explosion_985204-42622.avif</lien>
+        <roche>Volkenoloji</roche>
+        <salaire>75,000/yia</salaire>
+        <note>★★★★☆</note>
+        <detail>infomesen</detail>
+    </catalogue>
+</biblicatalogue>

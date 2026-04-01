@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblipropos>
+    <propos>
+        <adresse>adresse</adresse>
+        <employe>Nombre d'employés</employe>
+        <revenu>Revenu annuel</revenu>
+        <travail>Est-ce que les employés travail la fin de semain</travail>
+    </propos>
+    <propos>
+        <adresse>2101 rue Gilbert</adresse>
+        <employe>1</employe>
+        <revenu>12 000$/an</revenu>
+        <travail>non</travail>
+    </propos>
+</biblipropos>

@@ -1,24 +1,29 @@
-function Validation()
-{
-    let email = document.querySelector("#email").value;
-    let mdp = document.querySelector("#mdp").value;
-     
-    if (validateEmail(email) == true && verificationmdp(mdp) == true)
-    {
-        window.location.href ="catalogue.html";
+let email = false, motsPasse = false;
+function btn_Connexion(){
+    valideFormat();
+    return motsPasse;
+}
+function btn_Commence(){
+    window.location.href = "connexion.php";
+}
+
+function valideFormat(){
+    if(validationMotsPasse(document.querySelector('#Mots_de_passe').value) == true) {
+        motsPasse = true
     }
+    else
+        motsPasse = false;
+    /*if(validationEmail(document.querySelector('#email').value) == true) {
+        email=true;
+    }
+    else
+        email=false*/
+    return;
 }
-function validateEmail(email){
-    var emailReg = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/i);
-    return emailReg.test(email);
+function validationMotsPasse(chaine){
+    return /^[a-zA-Z1-9]{8}/.test(chaine);
 }
-function verificationmdp(mdp)
-{
-    if (mdp.length >= 8)
-        return true;
-    return false;
-}
-function ChangePage()
-{
-    window.location.href ="connexion.html";
-}
+/*
+function validationEmail(chaine){
+    return /^[a-zA-Z1-9]+\@[a-zA-Z1-9]+\.com)$/.test(chaine);
+}*/
