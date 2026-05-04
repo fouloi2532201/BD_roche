@@ -1,27 +1,29 @@
 <?php
-session_start();
 $email = $_POST["email"];
 $password = $_POST["password"];
 $langue = $_POST["langue"];
-ValidationConnexion($email, $password, $langue);
-    function ValidationConnexion($email, $password,$langue)
+
+    function ValidationConnexion($email, $password, $langue)
     {
         if($email != "" && $password != ""){
-            if($email == "test@cegepjonquiere.ca" && $password == "testcegep"){
-                $_SESSION["email"] = $_POST["email"];
-                $nbSecondesParJour = 60*60*24;
-                $expiration = time() + $nbSecondesParJour;
-                $cookieNom="langueCoockie";
-                $cookieValeur=$_POST["langue"];
-                setcookie($cookieNom, $cookieValeur, $expiration, "/");
+            $hashStockeEnBase = password_hash($password, PASSWORD_BCRYPT);
+           try
+           {
+            if(password_verify($password, $hashStockeEnBase))
+            {
+                echo "connexion reussie";
+                session_start();
+                session_regenerate_id(true);
+                $_SESSION['67'];
                 header("Location: ../catalogue.php");
-                exit();
-            
+                
             }
-            else{
-                header("Location: ../connexion.php?message=Mauvais utilisateur ou mauvais mot de passe");
-                exit();
-            }
+                
+           } 
+           catch(PDOException $e)
+           {
+                echo $e->getMessage();
+           }
         }
         else
         {
@@ -29,6 +31,7 @@ ValidationConnexion($email, $password, $langue);
             exit();
         }
     }
-    
+    ValidationConnexion($email, $password, $langue);
+
 ?>
 <html>

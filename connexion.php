@@ -22,7 +22,6 @@ include "include/header.php";
             </div>
             <select name="langue" id="langue">
                 <option value="francais">Français</option>
-                <option value="tok-pisin">Tok Pisin</option>
             </select>
             <input id="submit" type="submit" value="Connexion">
         </form>

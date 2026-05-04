@@ -6,12 +6,6 @@
 </head>
 <body>
 <?php
-        $lang = "tok_pisin";
-        if(isset($_COOKIE["langueCoockie"])){
-            if($_COOKIE["langueCoockie"] == "francais"){
-                $lang = "fr";
-            }
-        }
     include "include/header.php";
 ?>
 <div id="body">
@@ -20,7 +14,7 @@
     </aside>
     <section>
         <?php
-        $xml = simplexml_load_file("./langue/index_".$lang.".xml");
+        $xml = simplexml_load_file("./langue/index_fr.xml");
 
         if(isset($xml)){
             affichageindex($xml);
@@ -31,8 +25,17 @@
             echo "<h1>".htmlspecialchars($xml->text1)."</h1>";
             echo "<h1>".htmlspecialchars($xml->text2)."</h1>";
             echo "<input id=commence type=button value=".htmlspecialchars($xml->bouton)." onclick=btn_Commence()>";
+            echo "<input id=submit type=submit value=Deconnection onclick=deco()>";
+        }
+        function deco()
+        {
+            session_unset();
+            session_destroy();
+            header("Location: login.php?message=Vous avez été déco");
+            echo "cnusaygdsvbuai";
         }
         ?>
+
     </section>
 </div>
 <?php
