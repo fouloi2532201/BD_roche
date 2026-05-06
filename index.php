@@ -8,6 +8,7 @@
 <body>
 <?php
     include "include/header.php";
+
 ?>
 <div id="body">
 <script>
