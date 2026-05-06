@@ -18,7 +18,7 @@ include "../include/connexion_bd.php";
             $stmt->execute([
                 $email,
                 $hashStockeEnBase ]);
-                echo"inscription reussie";
+                header("Location: ../connexion.php");
            } 
            catch(PDOException $e)
            {

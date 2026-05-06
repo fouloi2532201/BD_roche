@@ -11,12 +11,10 @@ $langue = $_POST["langue"];
            {
             if(password_verify($password, $hashStockeEnBase))
             {
-                echo "connexion reussie";
                 session_start();
                 session_regenerate_id(true);
-                $_SESSION['67'];
-                header("Location: ../catalogue.php");
-                
+                $_SESSION["biscuit"] = "bombon";
+                header("Location: ../index.php");
             }
                 
            } 

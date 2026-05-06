@@ -1,8 +1,10 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html5>
 <?php
     include "connexion_bd.php";
     $lang = "tok_pisin";
-    session_start();
     if(isset($_COOKIE["langueCoockie"])){
         if($_COOKIE["langueCoockie"] == "francais"){
             $lang = "fr";
@@ -30,8 +32,13 @@
             echo "<a href=index.php>".htmlspecialchars($xml->accueil)."</a>";
             echo "<a href=catalogue.php>".htmlspecialchars($xml->catalogue)."</a>";
             echo "<a href=a_propos.php>".htmlspecialchars($xml->propos)."</a>";
-            echo "<a href=connexion.php>".htmlspecialchars($xml->connexion)."</a>";
-            echo "<a href=Insciption.php>inscription</a>";
+            if (isset($_SESSION["biscuit"])){
+                echo "<a href=profile.php>profil</a>";
+            }
+            else{
+                echo "<a href=connexion.php>".htmlspecialchars($xml->connexion)."</a>";
+                echo "<a href=Insciption.php>inscription</a>";
+            }
         }
     ?>
     </header>

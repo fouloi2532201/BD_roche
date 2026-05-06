@@ -2,6 +2,8 @@
 
 CREATE DATABASE bdroche
 
+DROP DATABASE bdroche
+
 use BDroche
 
  CREATE TABLE TblRoche
