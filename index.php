@@ -49,7 +49,7 @@ window.addEventListener("DOMContentLoaded", function() {
     </aside>
     <section>
         <?php
-        $xml = simplexml_load_file("./langue/index_fr.xml");
+        $xml = simplexml_load_file("./langue/index_$lang.xml");
         if(isset($xml)){
             affichageindex($xml);
             deco($xml);

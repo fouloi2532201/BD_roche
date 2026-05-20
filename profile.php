@@ -9,7 +9,7 @@
     include "include/header.php";
 ?>
     <div class="section2">
-    <form method="post" action="action/connexion-action.php">
+    <form method="post">
     <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -85,16 +85,6 @@ window.onload = function() {
 
 </body>
 </html>
-            <input type="email" id="email" name="email" autofocus required>
-            <div class="section3">
-                <label id="password" for="password">Mots de passe : </label>
-                <input type="password" id="password" name="password" minlength="8" required>
-            </div>
-            <select name="langue" id="langue">
-                <option value="francais">Français</option>
-            </select>
-            <input id="submit" type="submit" value="Connexion">
-        </form>
     </div>
 <?php
 include "include/footer.php";

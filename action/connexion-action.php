@@ -14,6 +14,9 @@ $langue = $_POST["langue"];
                 session_start();
                 session_regenerate_id(true);
                 $_SESSION["biscuit"] = "bombon";
+                $cookieNom="langueCoockie";
+                $cookieValeur=$_POST["langue"];
+                setcookie($cookieNom, $cookieValeur, $expiration, "/");
                 header("Location: ../index.php");
             }
                 
