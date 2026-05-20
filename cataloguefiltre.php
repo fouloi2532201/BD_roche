@@ -36,8 +36,9 @@
             }
         if(isset($xml)){
             try{
-                
-                $requete = "SELECT nom, nomLieu, description1, categorie, valeurDollars from tblroche WHERE valeurDollars $prix";
+                $requete = "SELECT nom, nomLieu, description1, categorie, valeurDollars, tbllieu.nomendroit from tblroche 
+                lEFT JOIN tbllieu ON tblroche.idlieu = tbllieu.idlieu WHERE tblroche.valeurDollars $prix AND tbllieu.nomendroit='$location' AND tblroche.categorie='$categorie'";
+
                 $reponce = $con->query($requete);
                 $tabroche = $reponce->fetchALL (PDO::FETCH_ASSOC);
                 foreach($tabroche as $roche){

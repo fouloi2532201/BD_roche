@@ -9,11 +9,11 @@
 include "include/header.php";
 ?>
     <div id="body2">
-        <h1>filtre</h1>
+        <h1>Filtre</h1>
     </div>
     <div class="section2">
         
-        <form method="post" action="action/cataloguefiltre.php">
+        <form method="POST" action="cataloguefiltre.php">
             <label for="location">Choisissez une location :</label>
                 <select id="location" name="location">
                 <?php 
@@ -21,7 +21,7 @@ include "include/header.php";
                     $reponce = $con->query($requete);
                     $tabroche = $reponce->fetchALL (PDO::FETCH_ASSOC);
                     foreach($tabroche as $roche){
-                        echo "<option value=valeur$roche[nomEndroit]>$roche[nomEndroit]</option>";
+                        echo "<option value=$roche[nomEndroit]>$roche[nomEndroit]</option>";
                     }
                 ?>
                 </select>
@@ -33,7 +33,7 @@ include "include/header.php";
                     $reponce = $con->query($requete);
                     $tabroche = $reponce->fetchALL (PDO::FETCH_ASSOC);
                     foreach($tabroche as $roche){
-                        echo "<option value=valeur$roche[categorie]>$roche[categorie]</option>";
+                        echo "<option value=$roche[categorie]>$roche[categorie]</option>";
                     }      
             ?>
             </select>
@@ -41,15 +41,15 @@ include "include/header.php";
             <label for="prix">Choisissez une tranche de prix :</label>
             <select id="prix" name="prix">
             <?php 
-                echo "<option value=< 5>< 5$</option>";
-                echo "<option value=< 5 & >=10>5$ à 10$</option>";
-                echo "<option value=< 10 & >=15>10$ à 15$</option>";
-                echo "<option value=>15>< 15$</option>";   
+                echo "<option value='<10'>< 10$</option>";
+                echo "<option value='>=10 AND tblroche.valeurDollars <25'> 10$ à 25$</option>";
+                echo "<option value='>=25 AND tblroche.valeurDollars <50'> 20$ à 50$</option>";
+                echo "<option value='>=50'> > 50$</option>";   
             ?>
             </select>
             <div>
             <?php 
-                echo "<button><a href=cataloguefiltre.php>Chercher</a></button>";  
+                echo "<input id=submit type=submit value=Chercher>";  
             ?>
             </div>
         </form>

@@ -67,7 +67,13 @@ window.addEventListener("DOMContentLoaded", function() {
             }
         if(isset($xml)){
             try{
-                echo "<button><a href=filtre.php>Filtre</a></button>";
+
+                if (isset($_SESSION["biscuit"]))
+                {
+                    echo "<button><a href=filtre.php>Filtre</a></button>";
+                    echo "<button><a href=tri.php>Tri</a></button>";
+                }
+
                 $requete = "SELECT nom, nomLieu, description1, categorie, valeurDollars from tblroche";
                 $reponce = $con->query($requete);
                 $tabroche = $reponce->fetchALL (PDO::FETCH_ASSOC);
