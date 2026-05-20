@@ -61,7 +61,7 @@ window.addEventListener("DOMContentLoaded", function() {
             echo "<h1>".htmlspecialchars($xml->text1)."</h1>";
             echo "<h1>".htmlspecialchars($xml->text2)."</h1>";
             echo "<a href=catalogue.php>";
-            echo "<button type=button>Connexion</button>";
+            echo "<button type=button>".htmlspecialchars($xml->bouton)."</button>";
             echo "</a>";
         }
 
@@ -69,7 +69,7 @@ window.addEventListener("DOMContentLoaded", function() {
         {
             
             echo "<a href=decoco.php>";
-            echo "<button type=button>Déconnexion</button>";
+            echo "<button type=button>".htmlspecialchars($xml->deco)."</button>";
             echo "</a>";
             exit;
         }

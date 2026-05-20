@@ -1,0 +1,9 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<biblipropos>
+        <filtre>Filtre</filtre>
+        <location>Choisissez une location :</location>
+        <categorie>Choisissez une categorie :</categorie>
+        <tranchePrix>Choisissez une tranche de prix</tranchePrix>
+        <cherche>Chercher</cherche>
+</biblipropos>

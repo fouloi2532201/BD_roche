@@ -5,27 +5,30 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    
 <?php
 include "include/header.php";
+$xml = simplexml_load_file("./langue/tri_$lang.xml");
+
 ?>
     <div id="body2">
-        <h1>Tri</h1>
+        <h1><?php echo htmlspecialchars($xml->filtre) ?></h1>
     </div>
     <div class="section2">
         
         <form method="POST" action="cataloguetri.php">
-        <label for="letre">Choisissez un ordre :</label>
+        <label for="letre"><?php echo htmlspecialchars($xml->choisire) ?></label>
             <select id="letre" name="letre">
             <?php 
-                    echo "<option value='nom ASC'>A à Z</option>";
-                    echo "<option value='nom DESC'>Z à A</option>";
-                    echo "<option value='valeurDollars ASC'>0$ à 1000000000000$</option>";
-                    echo "<option value='valeurDollars DESC'>1000000000000$ à 0$</option>";    
+                    echo "<option value='nom ASC'>A ".htmlspecialchars($xml->letre)." Z</option>";
+                    echo "<option value='nom DESC'>Z  ".htmlspecialchars($xml->letre)." A</option>";
+                    echo "<option value='valeurDollars ASC'>0$  ".htmlspecialchars($xml->letre)." 1000000000000$</option>";
+                    echo "<option value='valeurDollars DESC'>1000000000000$  ".htmlspecialchars($xml->letre)." 0$</option>";    
             ?>
             </select>
             <div>
             <?php 
-                echo "<input id=submit type=submit value=Trier>";  
+                echo "<input id=submit type=submit value=".htmlspecialchars($xml->trier).">";  
             ?>
             </div>
             </div>

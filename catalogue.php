@@ -70,8 +70,8 @@ window.addEventListener("DOMContentLoaded", function() {
 
                 if (isset($_SESSION["biscuit"]))
                 {
-                    echo "<button><a href=filtre.php>Filtre</a></button>";
-                    echo "<button><a href=tri.php>Tri</a></button>";
+                    echo "<button><a href=filtre.php>".htmlspecialchars($xml->filtre)."</a></button>";
+                    echo "<button><a href=tri.php>".htmlspecialchars($xml->tri)."</a></button>";
                 }
 
                 $requete = "SELECT nom, nomLieu, description1, categorie, valeurDollars from tblroche";

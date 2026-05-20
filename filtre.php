@@ -7,14 +7,15 @@
 <body>
 <?php
 include "include/header.php";
+$xml = simplexml_load_file("./langue/filtre_$lang.xml");
 ?>
     <div id="body2">
-        <h1>Filtre</h1>
+        <?php echo "<h1>".htmlspecialchars($xml->filtre)."</h1>" ?>
     </div>
     <div class="section2">
         
         <form method="POST" action="cataloguefiltre.php">
-            <label for="location">Choisissez une location :</label>
+            <label for="location"><?php echo htmlspecialchars($xml->location) ?></label>
                 <select id="location" name="location">
                 <?php 
                     $requete = "SELECT nomEndroit from tbllieu";
@@ -26,7 +27,7 @@ include "include/header.php";
                 ?>
                 </select>
             <div class="section3">
-            <label for="categorie">Choisissez une categorie :</label>
+            <label for="categorie"><?php echo htmlspecialchars($xml->categorie) ?></label>
             <select id="categorie" name="categorie">
             <?php 
                     $requete = "SELECT DISTINCT categorie from tblroche ORDER BY categorie ASC";
@@ -38,7 +39,7 @@ include "include/header.php";
             ?>
             </select>
             </div>
-            <label for="prix">Choisissez une tranche de prix :</label>
+            <label for="prix"><?php echo htmlspecialchars($xml->tranchePrix) ?></label>
             <select id="prix" name="prix">
             <?php 
                 echo "<option value='<10'>< 10$</option>";
@@ -49,7 +50,7 @@ include "include/header.php";
             </select>
             <div>
             <?php 
-                echo "<input id=submit type=submit value=Chercher>";  
+                echo "<input id=submit type=submit value=".htmlspecialchars($xml->cherche).">";  
             ?>
             </div>
         </form>

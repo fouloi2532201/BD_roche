@@ -33,11 +33,11 @@ session_start();
             echo "<a href=catalogue.php>".htmlspecialchars($xml->catalogue)."</a>";
             echo "<a href=a_propos.php>".htmlspecialchars($xml->propos)."</a>";
             if (isset($_SESSION["biscuit"])){
-                echo "<a href=profile.php>profil</a>";
+                echo "<a href=profile.php>".htmlspecialchars($xml->profile)."</a>";
             }
             else{
                 echo "<a href=connexion.php>".htmlspecialchars($xml->connexion)."</a>";
-                echo "<a href=Insciption.php>inscription</a>";
+                echo "<a href=Insciption.php>".htmlspecialchars($xml->insc)."</a>";
             }
         }
     ?>

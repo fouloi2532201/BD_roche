@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bibliotheque>
+    <connexion>rejistresen</connexion>
+    <email>E-mail :</email>
+    <mdp>Ol paswod:</mdp>
+    <fr>Frans</fr>
+    <tok>Tok Pisin</tok>
+    <boutton>rejistresen</boutton>
+</bibliotheque>

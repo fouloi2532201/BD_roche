@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bibliotheque>
-    <bouton>Courriel</bouton>
-    <bouton2>Mot de passe</bouton2>
+    <connexion>Connexion</connexion>
+    <email>Courriel :</email>
+    <mdp>Mots de passe :</mdp>
+    <fr>Français</fr>
+    <tok>Tok Pisin</tok>
+    <boutton>Connexion</boutton>
 </bibliotheque>
