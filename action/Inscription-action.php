@@ -36,4 +36,3 @@ include "../include/connexion_bd.php";
 
     
 ?>
-<html>
